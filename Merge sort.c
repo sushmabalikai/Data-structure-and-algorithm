@@ -41,45 +41,21 @@ void mergesort(int arr[],int start,int end)
     int mid=start+(end-start)/2;
     mergesort(arr,start,mid);
     mergesort(arr,mid+1,end);
-        
-   merge(arr,start,mid,end);
-        
-
-  }
-
+    merge(arr,start,mid,end);
+    }
 }
-
 void display(int arr[],int size){
-    
-   for(int i=0;i<size;i++)
-    
-   printf("%d ",arr[i]);
-    
-   printf("\n");
-
+    for(int i=0;i<size;i++)
+    printf("%d ",arr[i]);
+    printf("\n");
 }
-
 int main()
-
 {
-    
-   int arr[]={6,5,12,10,9,1};
-    
-   int size=sizeof(arr)/sizeof(arr[0]);
-    
-   printf("original array\n");
-    
-   display(arr,size);
-    
-   mergesort(arr,0,size-1);
-    
-   printf("sorted array\n");
-    
-   display(arr,size);
-
+    int arr[]={6,5,12,10,9,1};
+    int size=sizeof(arr)/sizeof(arr[0]);
+    printf("original array\n");
+    display(arr,size);
+    mergesort(arr,0,size-1);
+    printf("sorted array\n");
+    display(arr,size);
 }
-Output:
-original array
-6 5 12 10 9 1 
-sorted array
-1 5 6 9 10 12 
